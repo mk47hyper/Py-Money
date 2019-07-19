@@ -1,0 +1,25 @@
+<input type="hidden" id="contract" name="contract" value="{{ employee.contract }}">
+<div class="form-group">
+    <label for="hour_rate">Hour Rate</label>
+    <input type="number" class="form-control" id="hour_rate" name="hour_rate" value="{{ rate }}">
+  </div>
+  <div class="form-group">
+    <label for="hours_worked">Hours Worked</label>
+    <input type="number" class="form-control" id="hours_worked" name="hours_worked" placeholder=0>
+  </div>
+ <div class="form-group">
+    <label for="overtime_rate">Overtime Rate</label>
+    <input type="number" class="form-control" id="overtime_rate" name="overtime_rate" step="0.001" value={{ over }}>
+  </div>
+ <div class="form-group">
+    <label for="overtime_hours">Overtime Hours</label>
+    <input type="number" class="form-control" id="overtime_hours" name="overtime_hours" placeholder=0>
+  </div>
+ <div class="form-group">
+    <label for="pay">Pay</label>
+    <input type="number" class="form-control" id="pay" name="pay" step="0.01" placeholder=0>
+  </div>
+<div class="form-group">
+    <label for="note">Note</label>
+    <input type="text" class="form-control" id="note" name="note">
+</div>

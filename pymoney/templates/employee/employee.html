@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h2>{{ title }}</h2>
+                <p><strong>Email: </strong> {{ employee.email }} </p>
+                <p><strong>Phone: </strong> {{ employee.phone }} </p>
+                <p><strong>Address: </strong> {{ employee.address }} </p>
+                <p><strong>Contract: </strong> {{ employee.contract }}</p>
+                <a href="{{ url_for('employees.update_employee', employee_id=employee.id) }}">
+                    <input class="btn btn-outline-primary btn-sm" type="text" value="Update">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <form action="" method="POST">
+                    <fieldset class="form-group">
+                        <legend class="border-bottom mb-4">New Payment</legend>
+                        {% include form_template %}
+                        <div class="form-group">
+                            <input class="btn btn-primary btn-lg" type="submit" value="Confirm Payment">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-12 mt-5">
+
+{% include table_template %}
+
+
+</div>
+{% endblock content %}
